@@ -22,7 +22,7 @@
 package de.appplant.cordova.plugin.localnotification.util;
 
 import java.util.HashMap;
-import java.util.Random;
+import java.security.SecureRandom;
 
 import org.apache.cordova.CallbackContext;
 
@@ -104,7 +104,7 @@ public final class CallbackContextUtil {
      * @return Random number.
      */
     private static Integer generateRandom() {
-        Random rn = new Random();
+        SecureRandom rn = new SecureRandom();
 
         return rn.nextInt(1000000) + 1;
     }

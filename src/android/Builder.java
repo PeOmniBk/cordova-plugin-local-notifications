@@ -37,7 +37,7 @@ import android.os.Build;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.Random;
+import java.security.SecureRandom;
 
 import de.appplant.cordova.plugin.localnotification.action.Action;
 import de.appplant.cordova.plugin.localnotification.util.AssetUtil;
@@ -59,7 +59,7 @@ public final class Builder {
     private final Options options;
 
     // To generate unique request codes
-    private final Random random = new Random();
+    private final SecureRandom random = new SecureRandom();
 
     // Receiver to handle the clear event
     private Class<?> clearReceiver;
